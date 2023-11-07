@@ -1,4 +1,4 @@
-name: Python Mutation Testing Pipeline
+name: Mutation Test
 
 on:
     push:
