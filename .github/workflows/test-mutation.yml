@@ -29,8 +29,10 @@ jobs:
         pip install pytest pytest-cov
 
     - name: Clone Mutatest repository
-      run: git clone https://github.com/meghansh36/mutatest
+      run: |
+        git clone https://github.com/meghansh36/mutatest
 
     - name: Run Mutatest with pytest
       run: |
-        python3 ./mutatest/cli.py -s fastapi/fastapi/ -t "pytest --cov=fastapi/fastapi --cov-report=term --cov-report=html fastapi/tests --ignore=fastapi/tests/test_tutorial"
+        cd ./mutatest/mutatest
+        python3 cli.py -s ../../fastapi/ -t "pytest --cov=../../fastapi/ --cov-report=term --cov-report=html ../../tests --ignore=../../tests/test_tutorial"
