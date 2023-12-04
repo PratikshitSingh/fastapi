@@ -37,4 +37,4 @@ jobs:
     - name: Run Mutatest with pytest
       run: |
         cd ./mutatest/mutatest
-        python3 cli.py -s ../../fastapi/ -t "pytest --cov=../../fastapi/ --cov-report=term --cov-report=html ../../tests --ignore=../../tests/test_tutorial"
+        python3 cli.py -s ../../fastapi/ -t "pytest --cov=../../fastapi/ --cov-report=term --cov-report=html ../../tests --git-location=../../fastapi/ --ignore=../../tests/test_tutorial"
