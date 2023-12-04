@@ -33,6 +33,9 @@ jobs:
     - name: Clone Mutatest repository
       run: |
         git clone https://github.com/meghansh36/mutatest
+        pip install pipreqs
+        pipreqs ./mutatest/mutatest
+        pip install -r ./mutatest/mutatest/requirements.txt
 
     - name: Run Mutatest with pytest
       run: |
